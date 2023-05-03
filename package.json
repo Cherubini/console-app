@@ -1,0 +1,11 @@
+{
+  "name": "console-app",
+  "version": "1.0.0",
+  "description": "converter csv to json",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cherubini",
+  "license": "ISC"
+}
