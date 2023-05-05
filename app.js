@@ -1,7 +1,13 @@
+
+
 const fs = require('fs');
 let data;
+
+
+const input = `./data/${process.argv[2]}`
+
 try {
-    data = fs.readFileSync('./data/test.csv','utf8');
+    data = fs.readFileSync(input,'utf8');
     console.log(data);
     const json=parseCSV(data)
     writeJsonToFile(json);
@@ -35,9 +41,9 @@ function parseCSV(data) {
 
 function writeJsonToFile(json) {
     const content = json;
-
+    const output = `./output/${process.argv[3]}`;
     try {
-        fs.writeFileSync('./output/test.json', content)    
+        fs.writeFileSync(output, content)    
         //file written successfully
     } catch (error) {
         console.log(error);
